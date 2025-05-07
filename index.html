@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Problemas</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .node {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            margin: 10px 0;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 5px #ddd;
+            position: relative;
+        }
+
+        .branch {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .leaf {
+            border: 1px solid #bbb;
+            padding: 8px 12px;
+            margin: 0 10px;
+            text-align: center;
+            border-radius: 3px;
+            background-color: #eee;
+            box-shadow: 1px 1px 3px #ccc;
+            min-width: 150px;
+        }
+
+        .connector {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            height: 30px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+
+        .branch-connector {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+
+        .leaf-connector {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 15px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tree">
+        <div class="node">
+            <strong>PROBLEMA CENTRAL</strong><br>
+            Gestión ineficiente de la línea de producción de paletizado y almacenaje de panes en la Panadería "Eclipse 98"
+        </div>
+
+        <div class="branch">
+            <div class="node">
+                <strong>CAUSAS</strong>
+                <div class="branch">
+                    <div class="leaf">
+                        <strong>C1: Visibilidad Limitada y Retrasada del Proceso Productivo</strong>
+                        <div>C1.1: Desconocimiento del estado exacto y en tiempo real...</div>
+                        <div>C1.2: Dificultad para identificar cuellos de botella...</div>
+                        <div>C1.3: Recolección de datos de producción manual...</div>
+                        <div>C1.4: Información de diferentes etapas...</div>
+                    </div>
+                    <div class="leaf">
+                        <strong>C2: Toma de Decisiones Basada en Experiencia...</strong>
+                        <div>C2.1: Imposibilidad de simular el impacto de cambios...</div>
+                        <div>C2.2: Decisiones reactivas ante problemas...</div>
+                        <div>C2.3: Falta de herramientas para analizar datos...</div>
+                        <div>C2.4: Dificultad para adaptar rápidamente la producción...</div>
+                    </div>
+                    <div class="leaf">
+                        <strong>C3: Procesos de Optimización y Mejora Continua Lentos...</strong>
+                        <div>C3.1: Las pruebas de nuevas configuraciones...</div>
+                        <div>C3.2: Dificultad para establecer KPIs precisos...</div>
+                        <div>C3.3: Ciclos de mejora largos debido a la dependencia...</div>
+                    </div>
+                    <div class="leaf">
+                        <strong>C4: Gestión de Recursos (Equipos, Personal, Espacio) No Siempre Óptima</strong>
+                        <div>C4.1: Posible subutilización de maquinaria...</div>
+                        <div>C4.2: Planificación del almacenaje basada en estimaciones...</div>
+                        <div>C4.3: Mantenimiento predominantemente correctivo...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="branch">
+            <div class="node">
+                <strong>EFECTOS</strong>
+                <div class="branch">
+                    <div class="leaf">
+                        <strong>E1: Incremento de Costos Operativos</strong>
+                        <div>E1.1: Mayor consumo energético por unidad producida...</div>
+                        <div>E1.2: Tiempos muertos de maquinaria y personal...</div>
+                        <div>E1.3: Potencial desperdicio de material de empaque...</div>
+                        <div>E1.4: Costos de mantenimiento correctivo más altos...</div>
+                    </div>
+                    <div class="leaf">
+                        <strong>E2: Reducción de la Productividad y Eficiencia General</strong>
+                        <div>E2.1: Menor cantidad de panes paletizados y almacenados...</div>
+                        <div>E2.2: Tiempos de ciclo de producción más largos...</div>
+                        <div>E2.3: Incumplimiento potencial de los objetivos...</div>
+                        <div>E2.4: Baja Eficiencia General de los Equipos (OEE)...</div>
+                    </div>
+                    <div class="leaf">
+                        <strong>E3: Menor Calidad y Consistencia del Proceso</strong>
+                        <div>E3.1: Variabilidad en la calidad del paletizado...</div>
+                        <div>E3.2: Posibles errores o ineficiencias en el proceso...</div>
+                    </div>
+                    <div class="leaf">
+                        <strong>E4: Disminución de la Agilidad y Capacidad de Respuesta</strong>
+                        <div>E4.1: Dificultad para adaptarse a cambios en la planificación...</div>
+                        <div>E4.2: Tiempos de respuesta lentos ante incidencias...</div>
+                    </div>
+                    <div class="leaf">
+                        <strong>E5: Dificultades en la Planificación y Gestión Estratégica</strong>
+                        <div>E5.1: Complicaciones para realizar una planificación precisa...</div>
+                        <div>E5.2: Limitaciones para la toma de decisiones estratégicas...</div>
+                        <div>E5.3: Pérdida de competitividad a largo plazo.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
